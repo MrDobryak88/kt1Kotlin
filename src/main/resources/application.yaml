@@ -1,0 +1,13 @@
+ktor:
+  deployment:
+    port: 8080
+    host: 0.0.0.0 # Слушаем все интерфейсы
+
+  application:
+    modules:
+      # Указываем класс MainKt (из файла main.kt) и функцию module()
+      - com.example.MainKt.module
+
+      # Если хочешь разделить логику serialization отдельно (как в шаблоне):
+      # - com.example.SerializationKt.configureSerialization
+      # - com.example.RoutingKt.configureRouting
